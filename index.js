@@ -16,5 +16,8 @@ const connection =mongoose.connect(`mongodb+srv://xetrinbn66:Y3vsCajF3saO2wNO
     process.exit();
   });
 app.get('/', (req, res) => res.send('Hello World! Jindal Furniture '))
+app.get('/nabin', (req, res) => res.send('Hello nabin!  '))
+app.get('/neeraj', (req, res) => res.send('Hello nabin!  '))
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
