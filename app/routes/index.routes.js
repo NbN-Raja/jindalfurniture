@@ -23,6 +23,9 @@ module.exports = function(app) {
     // get images here 
     router.get('/carousel',indexcontroller.getcrausel)
 
+    // update crausel 
+    router.put('/update',upload.single('image'),indexcontroller.update)
+
 
 
 

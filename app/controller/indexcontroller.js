@@ -1,4 +1,6 @@
 const Crausel= require('../model/carousel.model')
+const path= require('path')
+const fs = require('fs');
 
 
 exports.get = (req, res) => {
@@ -42,6 +44,41 @@ exports.getcrausel= (req,res)=>{
       message: "Internal server error",
     });
   });
+
+      
+      
+
+}
+
+
+// update 
+
+exports.update= (req,res)=>{
+    const id = req.body.id
+    const name = req.body.name
+      
+    const image = req.file.filename 
+
+    Crausel.findByIdAndUpdate({_id:id},{$set : {name:name}},{$set: {image: image}})
+     .then((response)=>{
+
+      if(!response){
+        res.status(401).send({mesage:"error deleting your id"})
+      }else{
+
+        // if(response.image) {
+          
+        //   const imagePath = path.join(__dirname, '../public/carousel', response.image);
+        //   fs.unlink(imagePath , (error) => {
+        //     if (error) {
+        //       console.log(error);
+        //     }
+        //   });
+        // }
+        res.status(201).send({message: "updated  successfully"})
+      }
+      
+    })    
 
       
       
