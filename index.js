@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.json()); // Used to parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.get("/", (req, res) => res.send("Hello World! Jindal Furniture Type "));
+app.use("/", (req, res) => res.send("Hello World! Jindal Furniture Type "));
 
 require('./app/routes/index.routes')(app)
 
