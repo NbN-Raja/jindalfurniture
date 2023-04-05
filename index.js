@@ -31,7 +31,8 @@ require('./app/routes/products.routes')(app)
 
 const connection = mongoose
   .connect(
-    `mongodb://localhost:27017/test`,
+    `mongodb+srv://xetrinbn66:Y3vsCajF3saO2wNO
+    @cluster0.sha62xh.mongodb.net/test`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
