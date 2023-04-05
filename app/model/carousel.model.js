@@ -11,6 +11,13 @@ const crauselSchema = new mongoose.Schema({
 
 });
 
+
+
+
+
+
 const Crausel = mongoose.model("crausel", crauselSchema);
 
 module.exports = Crausel;
+
+

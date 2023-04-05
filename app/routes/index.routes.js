@@ -26,6 +26,8 @@ module.exports = function(app) {
     // update crausel 
     router.put('/update',upload.single('image'),indexcontroller.update)
 
+    router.post('/admin',indexcontroller.admin)
+
 
 
 

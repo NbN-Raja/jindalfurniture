@@ -84,3 +84,17 @@ exports.update= (req,res)=>{
       
 
 }
+
+
+exports.admin=(req,res)=>{
+
+    const { username, password } = req.body;
+
+  // Check if the username and password are correct
+  if (username === 'admin' && password === 'process.env.ADMIN_PASSWORD') {
+    res.send('Login successful');
+  } else {
+    res.status(401).send('Unauthorized');
+  }
+
+}
